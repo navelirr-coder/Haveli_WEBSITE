@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Pixelify+Sans:wght@400..700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Studio Haveli Brand Palette */
+    --obsidian: #0D0D0D;
+    --grey-base: #F5F5F3;
+    --chartreuse: #8F924A;
+    --deep-red: #8B0000;
+    --chrome-silver: #C0C0C0;
+    --soft-pink: #F4C2C2;
+    --burgundy: #5A0F1B;
+    --emerald: #046307;
+
+    /* System UI Variables */
+    --panel-bg: #FFFFFF;
+    --border-light: #E5E5E5;
+    --text-main: #333333;
+    --text-muted: #888888;
+}
+
+/* -----------------------------
+   Reset & Base Setup
+----------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--grey-base);
+    /* Subtle dotted grid pattern mimicking an engineered canvas */
+    background-image: radial-gradient(rgba(192, 192, 192, 0.35) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-position: center;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-main);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    padding: 64px 20px;
+}
+
+main {
+    max-width: 680px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* -----------------------------
+   Header Design
+----------------------------- */
+header {
+    text-align: center;
+    margin-bottom: 56px;
+    animation: haveli-pulse 4s ease-in-out infinite alternate;
+}
+
+header h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--chrome-silver);
+    margin-bottom: 16px;
+}
+
+header h2 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--obsidian);
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+header p {
+    font-size: 16px;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* -----------------------------
+   Main Form / Precision Panel
+----------------------------- */
+form {
+    background: var(--panel-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 16px;
+    padding: 48px 40px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+section {
+    margin-bottom: 56px;
+}
+
+section h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--obsidian);
+    margin-bottom: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 16px;
+}
+
+/* -----------------------------
+   Input Fields
+----------------------------- */
+.form-group {
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--obsidian);
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="url"] {
+    width: 100%;
+    padding: 16px;
+    background: var(--panel-bg);
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--obsidian);
+    transition: all 0.25s ease;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus {
+    border-color: var(--chartreuse);
+    box-shadow: 0 0 0 4px rgba(143, 146, 74, 0.12);
+}
+
+input::placeholder {
+    color: #B0B0B0;
+    font-weight: 400;
+}
+
+.error-message {
+    color: var(--deep-red);
+    font-size: 12px;
+    margin-top: 6px;
+    min-height: 15px;
+    font-weight: 500;
+    display: block;
+}
+
+/* -----------------------------
+   Question Blocks (Fieldsets)
+----------------------------- */
+fieldset {
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 28px;
+    background: var(--panel-bg);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    transition: border-color 0.2s ease;
+}
+
+fieldset:hover {
+    border-color: #D4D4D4;
+}
+
+legend {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--obsidian);
+    margin-bottom: 20px;
+    width: 100%;
+    float: left;
+    padding: 0;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+/* Custom Radio Button Engine */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #D0D0D0;
+    border-radius: 50%;
+    margin: 0;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+    background-color: var(--panel-bg);
+    flex-shrink: 0;
+}
+
+input[type="radio"]:checked {
+    border-color: var(--chartreuse);
+    background-color: var(--chartreuse);
+    box-shadow: inset 0 0 0 4px var(--panel-bg);
+}
+
+/* Default format for Yes/No (2 Options) */
+fieldset label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+    color: var(--obsidian);
+    cursor: pointer;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    transition: background 0.2s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+fieldset label:hover {
+    background: var(--grey-base);
+}
+
+/* Scale Format (Targeting fieldsets with 5 options via :has) */
+fieldset:has(label:nth-of-type(5)) {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+fieldset:has(label:nth-of-type(5)) label {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    color: var(--text-muted);
+    text-align: center;
+    flex: 1;
+    padding: 12px 4px;
+}
+
+fieldset:has(label:nth-of-type(5)) input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+/* -----------------------------
+   Buttons
+----------------------------- */
+#calculate-score {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    margin: 48px auto 0;
+    padding: 18px 28px;
+    background: var(--obsidian);
+    color: var(--panel-bg);
+    border: none;
+    border-radius: 12px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#calculate-score:hover {
+    background: var(--chartreuse);
+    color: var(--obsidian);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(143, 146, 74, 0.25);
+}
+
+/* -----------------------------
+   Score Display & Scanner
+----------------------------- */
+#score-display {
+    text-align: center;
+    margin-top: 48px;
+    padding: 48px;
+    background: var(--panel-bg);
+    border-radius: 16px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.03);
+}
+
+#loading-indicator {
+    width: 220px;
+    height: 2px;
+    background: var(--border-light);
+    margin: 0 auto 32px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+#loading-indicator::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: linear-gradient(90deg, transparent, var(--chartreuse), transparent);
+    animation: haveli-scan 1.8s infinite ease-in-out;
+}
+
+#score-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 80px;
+    font-weight: 700;
+    color: var(--obsidian);
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+#score-text {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+/* -----------------------------
+   Admin Dashboard
+----------------------------- */
+#admin-panel {
+    margin-top: 48px;
+    background: var(--panel-bg);
+    border-radius: 16px;
+    padding: 32px;
+    border: 1px solid var(--border-light);
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.03);
+    overflow-x: auto;
+}
+
+#admin-panel h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 24px;
+    color: var(--obsidian);
+    letter-spacing: -0.02em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    margin-bottom: 32px;
+    min-width: 600px;
+}
+
+th {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--obsidian);
+    padding: 16px 12px;
+    border-bottom: 2px solid var(--border-light);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+td {
+    padding: 16px 12px;
+    font-size: 14px;
+    color: var(--text-muted);
+    border-bottom: 1px solid var(--border-light);
+    transition: background 0.2s ease;
+}
+
+tbody tr:hover td {
+    background: var(--grey-base);
+    color: var(--obsidian);
+    cursor: pointer;
+}
+
+.admin-actions {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+}
+
+.admin-actions button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#export-data {
+    background: var(--obsidian);
+    color: var(--panel-bg);
+    border: 1px solid var(--obsidian);
+}
+
+#export-data:hover {
+    background: var(--chartreuse);
+    border-color: var(--chartreuse);
+    color: var(--obsidian);
+}
+
+#close-admin {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-light);
+}
+
+#close-admin:hover {
+    background: var(--grey-base);
+    color: var(--obsidian);
+}
+
+/* -----------------------------
+   Admin Access Button
+----------------------------- */
+.admin-access-container {
+    text-align: center;
+    margin-top: 72px;
+}
+
+#admin-access {
+    background: transparent;
+    border: none;
+    color: var(--chrome-silver);
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 8px 16px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#admin-access:hover {
+    color: var(--chartreuse);
+}
+
+/* -----------------------------
+   Footer
+----------------------------- */
+footer {
+    text-align: center;
+    margin-top: 48px;
+    padding-bottom: 32px;
+}
+
+footer p {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 12px;
+    color: var(--chrome-silver);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* -----------------------------
+   Animations
+----------------------------- */
+@keyframes haveli-scan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+}
+
+@keyframes haveli-pulse {
+    0% { opacity: 0.90; }
+    100% { opacity: 1; }
+}
+
+/* -----------------------------
+   iPad & Tablet Optimization
+----------------------------- */
+@media (max-width: 768px) {
+    body {
+        padding: 32px 16px;
+    }
+
+    form {
+        padding: 32px 24px;
+    }
+
+    header h2 {
+        font-size: 42px; /* Adjusted slightly smaller for mobile */
+    }
+    
+    fieldset {
+        padding: 20px 16px;
+    }
+
+    /* Keep Scale options tightly packed but touch-friendly */
+    fieldset:has(label:nth-of-type(5)) {
+        gap: 6px;
+    }
+
+    fieldset:has(label:nth-of-type(5)) label {
+        padding: 12px 2px;
+        font-size: 11px;
+    }
+
+    #score-number {
+        font-size: 64px;
+    }
+}

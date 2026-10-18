@@ -1,0 +1,86 @@
+.signature-header {
+  --signature-nav-opacity:1;
+  --signature-header-opacity:1;
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:transparent;
+  border-bottom:0;
+}
+.signature-header::before {
+  content:""; position:absolute; inset:0; z-index:-1;
+  background:var(--paper); border-bottom:1px solid var(--line);
+  opacity:var(--signature-header-opacity);
+}
+.signature-wordmark { display:block; position:relative; width:142px; flex-shrink:0; transform-origin:top left; z-index:1; }
+.signature-wordmark .wordmark-layer { position:absolute; left:0; width:100%; height:auto; display:block; }
+.signature-wordmark .wordmark-pink,
+.signature-wordmark .wordmark-red,
+.signature-wordmark .wordmark-green { top:0; opacity:0; }
+/* The flat wordmark breathes pink, then red, then green while the hero rests
+   at full screen. Base opacities also serve as the reduced-motion still. */
+.signature-wordmark .wordmark-pink { opacity:1; animation:wordmark-cycle-pink 21s linear infinite; }
+.signature-wordmark .wordmark-red { animation:wordmark-cycle-red 21s linear infinite; }
+.signature-wordmark .wordmark-green { animation:wordmark-cycle-green 21s linear infinite; }
+/* The supplied chrome render is a touch taller; centre it on the same width. */
+.signature-wordmark .wordmark-chrome { top:50%; transform:translateY(-50%); opacity:0; transition:opacity .5s ease; }
+.signature-header[data-signature-home="false"] .wordmark-pink,
+.signature-header[data-signature-home="false"] .wordmark-red,
+.signature-header[data-signature-home="false"] .wordmark-green,
+.signature-header[data-signature-scrolled="true"] .wordmark-pink,
+.signature-header[data-signature-scrolled="true"] .wordmark-red,
+.signature-header[data-signature-scrolled="true"] .wordmark-green { animation:none; opacity:0; }
+.signature-header[data-signature-home="false"] .wordmark-chrome,
+.signature-header[data-signature-scrolled="true"] .wordmark-chrome { opacity:1; }
+@keyframes wordmark-cycle-pink {
+  0%, 30% { opacity:1; }
+  38%, 92% { opacity:0; }
+  100% { opacity:1; }
+}
+@keyframes wordmark-cycle-red {
+  0%, 30% { opacity:0; }
+  38%, 62% { opacity:1; }
+  70%, 100% { opacity:0; }
+}
+@keyframes wordmark-cycle-green {
+  0%, 62% { opacity:0; }
+  70%, 92% { opacity:1; }
+  100% { opacity:0; }
+}
+.signature-nav { opacity:var(--signature-nav-opacity); position:relative; }
+.signature-header[data-signature-home="true"] { position:fixed; left:0; right:0; --signature-nav-opacity:0; --signature-header-opacity:0; pointer-events:none; }
+.signature-header[data-signature-home="true"] .signature-wordmark { pointer-events:auto; }
+.signature-header[data-signature-docked="true"] .signature-nav { pointer-events:auto; }
+.signature-header:focus-within .signature-nav { opacity:1; pointer-events:auto; }
+.signature-header[data-signature-home="true"]:not([data-signature-ready="true"]) .signature-wordmark {
+  position:fixed; left:50%; top:50svh; width:min(84vw,1360px); transform:translate(-50%,-50%);
+}
+.signature-hero {
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+  min-height:100svh;
+  background:var(--burgundy);
+}
+.home-page h2,.home-page h2 em { font-weight:400; }
+.home-page .manifesto-copy p,.home-page .services-overview .section-heading>p,
+.home-page .process-list p,.home-page .audit-invitation p { font-size:clamp(16px,1.3vw,19px); font-weight:400; line-height:1.7; }
+.home-page .manifesto-copy p { max-width:560px; }
+.home-page .process-list h3,.home-page .service-title { font-weight:400; }
+.home-page .contact-ribbon { grid-template-columns:1fr 2.5fr 1fr; }
+.home-page .contact-ribbon h2 { font-size:clamp(46px,6vw,90px); }
+.home-page .audit-mark small { display:block; margin:12px 0 0; line-height:1.4; }
+/* Homepage audit invitation: vivid orange type on the maroon panel, with
+   lighter display weights for the oversized heading and count. */
+.home-page .audit-invitation { color:var(--orange); }
+.home-page .audit-invitation h2,.home-page .audit-invitation h2 em,
+.home-page .audit-invitation .audit-mark { font-weight:300; }
+.home-page .audit-invitation .audit-mark { border-bottom-color:rgba(255,106,20,.4); }
+
+@media(max-width:700px) {
+  .signature-wordmark { width:112px; }
+  .home-page .contact-ribbon { grid-template-columns:1fr; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .signature-wordmark { will-change:auto; }
+}

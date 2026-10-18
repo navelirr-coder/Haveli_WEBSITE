@@ -1,0 +1,29 @@
+{
+  "target": "C:\\Users\\navel\\OneDrive\\Desktop\\HAVELI STUDIOS\\Choudhari Farm Products CFP\\CFP_Website",
+  "originals": {
+    "index.html": "526da86d561fae786cb44ad5a6a16fb0ee966e2520890906b70956523e99653a",
+    "shop.html": "bde7a130495015d69a1a2211344845fee69588fa841eb3929d7752595c73d39f",
+    "product-details.html": "d2577ec9d05acf4e656a734644728f3de2e210325236482db5d06171a80fea06",
+    "contact.html": "f9d545469864bd71ea37aa7f9324f40f7a77b50dda341c562edff49cbb56767a",
+    "hero-slide-one.css": "3ec34a35f700bc34a551aedb5cd0cc3332982a296bdcbf20c87df41b242a2d5e"
+  },
+  "unchanged": {
+    "script.js": "02838575925fae94b07855ffcee5768cf8761bb248032c9827c99b0eecba64e2",
+    "style.css": "5fa51d16a43b4bea92450ac31678736a271030fb4db2db51e57ff1de0e56044c",
+    "CFP_Slide1.png": "c3e35b2df49272117a4d3d8cfdd06c3ee0856ea0c986f85f6b6d5d5a1ed5bc82",
+    "CFP_Slide2.png": "30bf12eb4ad95d72f89a973fdd77fc696a35b2f18a5770d8afbec699ad1702c4",
+    "CFP_Slide3.png": "68c4dca3edbb3ae5f02105cafbd7fe3227d7fbcdaefabc87bf203f01d6445015"
+  },
+  "files": [
+    "index.html",
+    "shop.html",
+    "product-details.html",
+    "contact.html",
+    "hero-slide-one.css",
+    "hero-slide-one.js",
+    "turmeric-export.css",
+    "turmeric-export.js",
+    "assets/images/turmeric/Turmeric.jpg",
+    "assets/images/turmeric/Turmeric (1).jpg"
+  ]
+}

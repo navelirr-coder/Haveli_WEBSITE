@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Haveli Brand Diagnostic System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <!-- SYSTEM HEADER -->
+        <header>
+            <h1>STUDIO HAVELI</h1>
+            <h2>Brand Diagnostic System</h2>
+            <p>Discover how strong your brand really is</p>
+        </header>
+
+        <!-- DIAGNOSTIC FORM -->
+        <form id="diagnostic-form">
+            
+            <!-- CONTACT FORM SECTION -->
+            <section id="contact-details">
+                <h3>Contact Details</h3>
+                
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required minlength="2" maxlength="50">
+                    <span id="name-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="business">Business Name</label>
+                    <input type="text" id="business" name="business" required minlength="2" maxlength="100">
+                    <span id="business-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" inputmode="numeric" required placeholder="9876543210">
+                    <span id="phone-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                    <span id="email-error" class="error-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="url" id="website" name="website" placeholder="https://yourwebsite.com">
+                    <span id="website-error" class="error-message"></span>
+                </div>
+            </section>
+
+            <!-- QUESTIONNAIRE SECTION -->
+            <section id="questionnaire">
+                
+                <div id="scale-explanation">
+                    <h3>Brand Development Level</h3>
+                    <div class="scale-guide">
+                        <div class="scale-row">
+                            <span class="dot filled"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="scale-label">1 — Not created yet</span>
+                        </div>
+                        <div class="scale-row">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot filled"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="scale-label">3 — Exists but needs improvement</span>
+                        </div>
+                        <div class="scale-row">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot filled"></span>
+                            <span class="scale-label">5 — Fully developed and professional</span>
+                        </div>
+                    </div>
+                    <p>Select the level that best matches your business today.</p>
+                </div>
+
+                <!-- SECTION: BUSINESS CLARITY -->
+                <fieldset id="q1" data-category="strategy" data-question="Do people understand what your business does immediately?">
+                    <legend>Do people understand what your business does immediately?</legend>
+                    <label><input type="radio" name="q1" value="yes" required> Yes</label>
+                    <label><input type="radio" name="q1" value="no" required> No</label>
+                </fieldset>
+
+                <fieldset id="q2" data-category="strategy" data-question="How different does your business look compared to competitors?">
+                    <legend>How different does your business look compared to competitors?</legend>
+                    <label class="scale-option"><input type="radio" name="q2" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q2" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q2" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q2" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q2" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <fieldset id="q3" data-category="strategy" data-question="How clearly do you know who your ideal customers are?">
+                    <legend>How clearly do you know who your ideal customers are?</legend>
+                    <label class="scale-option"><input type="radio" name="q3" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q3" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q3" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q3" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q3" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <fieldset id="q4" data-category="strategy" data-question="How premium does your business look?">
+                    <legend>How premium does your business look?</legend>
+                    <label class="scale-option"><input type="radio" name="q4" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q4" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q4" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q4" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q4" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <fieldset id="q5" data-category="strategy" data-question="How confident are you showing your business to new customers?">
+                    <legend>How confident are you showing your business to new customers?</legend>
+                    <label class="scale-option"><input type="radio" name="q5" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q5" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q5" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q5" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q5" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <!-- SECTION: LOGO & VISUAL LOOK -->
+                <fieldset id="q6" data-category="identity" data-question="Do you have a professionally designed logo?">
+                    <legend>Do you have a professionally designed logo?</legend>
+                    <label><input type="radio" name="q6" value="yes" required> Yes</label>
+                    <label><input type="radio" name="q6" value="no" required> No</label>
+                </fieldset>
+
+                <fieldset id="q7" data-category="identity" data-question="How modern does your logo look?">
+                    <legend>How modern does your logo look?</legend>
+                    <label class="scale-option"><input type="radio" name="q7" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q7" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q7" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q7" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q7" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <fieldset id="q8" data-category="identity" data-question="Do you use the same colours everywhere?">
+                    <legend>Do you use the same colours everywhere?</legend>
+                    <label><input type="radio" name="q8" value="yes" required> Yes</label>
+                    <label><input type="radio" name="q8" value="no" required> No</label>
+                </fieldset>
+
+                <fieldset id="q9" data-category="identity" data-question="How professional does your business look overall?">
+                    <legend>How professional does your business look overall?</legend>
+                    <label class="scale-option"><input type="radio" name="q9" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q9" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q9" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q9" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q9" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <fieldset id="q10" data-category="identity" data-question="How memorable is your brand?">
+                    <legend>How memorable is your brand?</legend>
+                    <label class="scale-option"><input type="radio" name="q10" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q10" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q10" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q10" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q10" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <!-- SECTION: BUSINESS MATERIAL -->
+                <fieldset id="q11" data-category="stationery" data-question="Do you have a visiting card?">
+                    <legend>Do you have a visiting card?</legend>
+                    <label><input type="radio" name="q11" value="yes" required> Yes</label>
+                    <label><input type="radio" name="q11" value="no" required> No</label>
+                </fieldset>
+
+                <fieldset id="q12" data-category="stationery" data-question="How premium does your visiting card look?">
+                    <legend>How premium does your visiting card look?</legend>
+                    <label class="scale-option"><input type="radio" name="q12" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q12" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q12" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q12" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q12" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <fieldset id="q13" data-category="stationery" data-question="Do your bills and documents look professional?">
+                    <legend>Do your bills and documents look professional?</legend>
+                    <label><input type="radio" name="q13" value="yes" required> Yes</label>
+                    <label><input type="radio" name="q13" value="no" required> No</label>
+                </fieldset>
+
+                <fieldset id="q14" data-category="stationery" data-question="How professional do your business materials look overall?">
+                    <legend>How professional do your business materials look overall?</legend>
+                    <label class="scale-option"><input type="radio" name="q14" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q14" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q14" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q14" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q14" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <!-- SECTION: PACKAGING -->
+                <fieldset id="q15" data-category="packaging" data-question="Do your products have proper packaging?">
+                    <legend>Do your products have proper packaging?</legend>
+                    <label><input type="radio" name="q15" value="yes" required> Yes</label>
+                    <label><input type="radio" name="q15" value="no" required> No</label>
+                </fieldset>
+
+                <fieldset id="q16" data-category="packaging" data-question="How professional does your packaging look?">
+                    <legend>How professional does your packaging look?</legend>
+                    <label class="scale-option"><input type="radio" name="q16" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q16" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q16" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q16" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q16" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <fieldset id="q17" data-category="packaging" data-question="How attractive is your packaging?">
+                    <legend>How attractive is your packaging?</legend>
+                    <label class="scale-option"><input type="radio" name="q17" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q17" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q17" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q17" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q17" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <fieldset id="q18" data-category="packaging" data-question="Do all your products look like same brand?">
+                    <legend>Do all your products look like same brand?</legend>
+                    <label><input type="radio" name="q18" value="yes" required> Yes</label>
+                    <label><input type="radio" name="q18" value="no" required> No</label>
+                </fieldset>
+
+                <fieldset id="q19" data-category="packaging" data-question="How confident are you in your packaging?">
+                    <legend>How confident are you in your packaging?</legend>
+                    <label class="scale-option"><input type="radio" name="q19" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q19" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q19" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q19" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q19" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <!-- SECTION: WEBSITE -->
+                <fieldset id="q20" data-category="website" data-question="Do you have a website?">
+                    <legend>Do you have a website?</legend>
+                    <label><input type="radio" name="q20" value="yes" required> Yes</label>
+                    <label><input type="radio" name="q20" value="no" required> No</label>
+                </fieldset>
+
+                <fieldset id="q21" data-category="website" data-question="How modern does your website look?">
+                    <legend>How modern does your website look?</legend>
+                    <label class="scale-option"><input type="radio" name="q21" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q21" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q21" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q21" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q21" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <fieldset id="q22" data-category="website" data-question="How confident are you showing your website to clients?">
+                    <legend>How confident are you showing your website to clients?</legend>
+                    <label class="scale-option"><input type="radio" name="q22" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q22" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q22" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q22" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q22" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <fieldset id="q23" data-category="website" data-question="How much does your website build trust?">
+                    <legend>How much does your website build trust?</legend>
+                    <label class="scale-option"><input type="radio" name="q23" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q23" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q23" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q23" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q23" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <!-- SECTION: TRUST -->
+                <fieldset id="q24" data-category="trust" data-question="How professional does your business look overall?">
+                    <legend>How professional does your business look overall?</legend>
+                    <label class="scale-option"><input type="radio" name="q24" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q24" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q24" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q24" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q24" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+                <fieldset id="q25" data-category="trust" data-question="How ready is your business to grow bigger?">
+                    <legend>How ready is your business to grow bigger?</legend>
+                    <label class="scale-option"><input type="radio" name="q25" value="1" required><span class="dot"></span><span class="scale-number">1</span></label>
+                    <label class="scale-option"><input type="radio" name="q25" value="2" required><span class="dot"></span><span class="scale-number">2</span></label>
+                    <label class="scale-option"><input type="radio" name="q25" value="3" required><span class="dot"></span><span class="scale-number">3</span></label>
+                    <label class="scale-option"><input type="radio" name="q25" value="4" required><span class="dot"></span><span class="scale-number">4</span></label>
+                    <label class="scale-option"><input type="radio" name="q25" value="5" required><span class="dot"></span><span class="scale-number">5</span></label>
+                </fieldset>
+
+            </section>
+
+            <button type="button" id="calculate-score">Check My Brand Strength</button>
+        </form>
+
+        <!-- SCORE DISPLAY SECTION -->
+        <section id="score-display" style="display: none;" hidden>
+            <div id="loading-indicator"></div>
+            <div id="score-number"></div>
+            <div id="score-text"></div>
+        </section>
+
+        <!-- ADMIN PANEL SECTION -->
+        <section id="admin-panel" style="display: none;" hidden>
+            <h3>Admin Dashboard</h3>
+            <table id="clients-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Business</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Missing Areas</th>
+                        <th>Score</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows populated by JS -->
+                </tbody>
+            </table>
+            
+            <div class="admin-actions">
+                <button type="button" id="export-data">Export</button>
+                <button type="button" id="close-admin">Close Admin</button>
+            </div>
+        </section>
+
+        <!-- ADMIN ACCESS BUTTON -->
+        <div class="admin-access-container">
+            <button type="button" id="admin-access">Admin Access</button>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Studio Haveli</p>
+    </footer>
+
+    <!-- SCRIPT LINKS -->
+    <script src="db.js"></script>
+    <script src="app.js"></script>
+    <script src="export.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+.packaging-study { --packaging-green:#163f2c; }
+.packaging-study p { text-wrap:pretty; }
+.packaging-opening { background:var(--packaging-green); color:var(--paper); padding-top:40px; padding-bottom:40px; }
+.packaging-opening-grid { display:grid; grid-template-columns:5fr 7fr; align-items:center; gap:clamp(28px,4vw,70px); margin-top:36px; }
+.packaging-heading h1 { font-size:clamp(58px,6.7vw,118px); margin:30px 0; }
+.packaging-descriptor { max-width:310px; font-size:clamp(18px,1.5vw,24px); }
+.packaging-art { min-width:0; margin:0; padding-block:24px; }
+.packaging-art-frame { display:flex; align-items:center; justify-content:center; background:#eeeae0; }
+.packaging-art img { display:block; width:100%; height:auto; object-fit:contain; }
+.packaging-art figcaption { font-size:11px; line-height:1.5; margin-top:12px; }
+.packaging-opening .packaging-art-frame { background:transparent; }
+.packaging-overview { display:grid; grid-template-columns:7fr 4fr; gap:12%; padding-top:70px; padding-bottom:45px; }
+.packaging-overview h2,.packaging-strategy h2,.packaging-outcome h2 { font-size:clamp(46px,5.4vw,86px); margin:22px 0 30px; }
+.packaging-overview p { max-width:620px; font-size:18px; line-height:1.75; }
+.packaging-overview aside { padding-top:12px; }
+.packaging-overview ul { list-style:none; padding:20px 0 0; margin:0; }
+.packaging-overview li { border-top:1px solid var(--line); padding:15px 0; }
+.packaging-strategy { padding-top:30px; padding-bottom:65px; }
+.packaging-strategy-intro { margin-bottom:35px; }
+.packaging-strategy-intro p:not(.eyebrow) { font-size:16px; line-height:1.8; margin-bottom:22px; }
+.packaging-audience { display:grid; grid-template-columns:4fr 7fr; gap:6%; padding:35px 45px; margin-top:28px; }
+.packaging-audience--kids { background:#e7dfbf; }
+.packaging-audience--adults { background:#e9d9dc; }
+.packaging-audience-copy { padding-top:24px; }
+.packaging-audience-copy h3 { font-family:var(--font-display); font-size:clamp(35px,3.4vw,54px); line-height:1; letter-spacing:-.045em; margin:25px 0; }
+.packaging-audience-copy>p:not(.eyebrow) { font-size:15px; line-height:1.8; }
+.packaging-audience-art { display:grid; grid-template-columns:1fr 1fr; align-items:start; gap:8px 22px; }
+.packaging-audience--kids .packaging-art-frame { background:#fff; padding:12px; aspect-ratio:1; }
+.packaging-audience--kids img { max-height:100%; width:100%; height:100%; }
+.packaging-audience--adults .audience-image-2 { margin-top:65px; }
+.packaging-audience--adults .audience-image-3 { margin-top:-45px; }
+.packaging-outcome { padding-top:45px; padding-bottom:70px; display:grid; grid-template-columns:1fr 1fr; gap:10%; align-items:center; border-top:1px solid var(--line); }
+.packaging-outcome .text-link { margin-top:25px; }
+.packaging-outcome p:not(.eyebrow) { font-size:16px; line-height:1.8; }
+@media(min-width:701px) and (max-width:1000px) {
+  .packaging-opening-grid { grid-template-columns:1fr; }
+  .packaging-heading { max-width:600px; }
+  .packaging-opening-grid>.packaging-art { width:82%; justify-self:end; }
+  .packaging-audience { grid-template-columns:1fr; padding:32px; gap:35px; }
+  .packaging-audience-copy { max-width:600px; }
+  .packaging-outcome { grid-template-columns:1fr 1fr; gap:6%; }
+}
+@media(max-width:700px) {
+  .packaging-opening-grid,.packaging-overview,.packaging-audience,.packaging-outcome { grid-template-columns:minmax(0,1fr); gap:24px; }
+  .packaging-art { padding-block:12px; }
+  .packaging-audience-copy { padding-top:0; }
+  .packaging-opening { padding-top:28px; }
+  .packaging-heading h1 { font-size:clamp(49px,11.5vw,78px); }
+  .packaging-opening-grid { margin-top:40px; }
+  .packaging-overview,.packaging-strategy,.packaging-outcome { padding-top:45px; padding-bottom:40px; }
+  .packaging-overview p { font-size:16px; }
+  .packaging-strategy-intro { margin-bottom:35px; }
+  .packaging-audience { padding:28px 20px; margin-left:-8px; margin-right:-8px; }
+  .packaging-audience-art { grid-template-columns:minmax(0,1fr); gap:30px; }
+  .packaging-audience-art>* { margin-top:0 !important; }
+  .packaging-audience--kids .packaging-art { max-width:370px; width:100%; justify-self:center; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .packaging-parallax { transform:none !important; }
+}

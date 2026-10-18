@@ -1,0 +1,135 @@
+/* The client's artwork sets this local frame; global Studio Haveli tokens stay intact. */
+.avaia-case-study {
+  --avaia-cream: #f3e6d1;
+  --avaia-brown: #69563b;
+  --avaia-line: rgba(105, 86, 59, .26);
+  background: #f6efdf;
+  color: var(--avaia-brown);
+}
+.avaia-opening { padding:48px var(--gutter) 38px; }
+.avaia-opening .back-link { margin-bottom:45px; }
+.avaia-intro-grid { display:grid; grid-template-columns:1.4fr 1fr; align-items:end; gap:clamp(35px,7vw,110px); }
+.avaia-opening h1 { font-size:clamp(66px,8.8vw,136px); line-height:.92; letter-spacing:-.065em; margin-top:24px; }
+.avaia-opening .hero-line { display:block; }
+.avaia-opening h1 em { font-size:.64em; letter-spacing:-.055em; }
+.avaia-introduction { max-width:385px; font-size:clamp(16px,1.4vw,21px); line-height:1.55; padding-bottom:7px; }
+.avaia-services { padding:24px 0 0; margin:38px 0 0; list-style:none; display:flex; flex-wrap:wrap; gap:12px 28px; border-top:1px solid var(--avaia-line); font-size:11px; letter-spacing:.02em; }
+.avaia-bento { display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:24px; padding:0 var(--gutter) 50px; grid-auto-flow:row dense; }
+.avaia-cell { min-width:0; margin:0; }
+.avaia-artwork { width:100%; height:100%; min-width:0; display:flex; justify-content:center; align-items:center; }
+.avaia-artwork img { display:block; max-width:100%; height:auto; object-fit:contain; }
+.avaia-cell figcaption { display:flex; align-items:baseline; justify-content:space-between; gap:10px 22px; flex-wrap:wrap; padding:14px 0 0; font-size:10px; line-height:1.6; }
+.avaia-original-link { display:inline-flex; align-items:center; gap:6px; text-decoration:underline; text-underline-offset:3px; white-space:nowrap; }
+.avaia-original-link:hover { text-decoration-thickness:2px; }
+.avaia-cell--banner { grid-column:1/-1; margin-bottom:30px; }
+.avaia-cell--banner .avaia-artwork { height:auto; background:var(--avaia-cream); }
+.avaia-cell--banner img { width:100%; }
+.avaia-narrative { padding:30px 24px; border-top:1px solid var(--avaia-line); }
+.avaia-narrative h2 { font-family:var(--font-sans); letter-spacing:.13em; font-size:10px; line-height:1.4; margin-bottom:25px; }
+.avaia-narrative p { font-size:14px; line-height:1.8; }
+.avaia-narrative p+p { margin-top:18px; }
+.avaia-cell--brief { grid-column:span 3; }
+.avaia-cell--primary { grid-column:span 6; grid-row:span 2; min-height:730px; display:flex; flex-direction:column; }
+.avaia-cell--primary .avaia-artwork { flex:1; height:0; min-height:650px; background:var(--avaia-cream); padding:35px; }
+.avaia-cell--primary img { width:100%; height:100%; max-height:830px; }
+.avaia-cell--challenge { grid-column:span 3; }
+.avaia-cell--concept { grid-column:span 3; }
+.avaia-cell--strategy { grid-column:span 3; }
+.avaia-cell--cards { grid-column:span 6; display:flex; flex-direction:column; margin-top:30px; }
+.avaia-cell--cards .avaia-artwork { min-height:300px; padding:35px; background:#e5dbc9; }
+.avaia-cell--cards img { width:auto; max-width:min(100%,503px); }
+.avaia-cell--execution { grid-column:span 6; margin-top:30px; padding:32px 38px; background:#eae1ce; border-top:0; }
+.avaia-cell--execution ul { list-style:none; padding:0; margin:0; display:grid; grid-template-columns:1fr 1fr; column-gap:25px; }
+.avaia-cell--execution li { font-size:13px; padding:11px 0; border-bottom:1px solid var(--avaia-line); }
+.avaia-cell--letterhead { grid-column:span 7; grid-row:span 2; display:flex; flex-direction:column; margin-top:30px; }
+.avaia-cell--letterhead .avaia-artwork { flex:1; padding:45px; background:#e5ddcf; }
+.avaia-cell--letterhead img { width:min(100%,480px); }
+.avaia-cell--typeface { grid-column:span 5; display:flex; flex-direction:column; margin-top:30px; }
+.avaia-cell--typeface .avaia-artwork { min-height:240px; padding:30px; background:#fff; }
+.avaia-cell--symbol { grid-column:span 5; display:flex; flex-direction:column; }
+.avaia-cell--symbol .avaia-artwork { min-height:330px; max-height:420px; padding:30px; background:#d8d3c3; }
+.avaia-cell--symbol img { width:auto; height:100%; max-height:350px; }
+.avaia-cell--outcome { grid-column:1/-1; padding:65px 0 30px; margin-top:40px; display:grid; grid-template-columns:1fr 3fr; gap:30px; }
+.avaia-cell--outcome p { font-family:var(--font-display); font-size:clamp(30px,3.5vw,53px); line-height:1.2; letter-spacing:-.04em; max-width:1040px; }
+.avaia-related { background:var(--paper); color:var(--ink); }
+.avaia-related .section-heading h2 { font-size:clamp(48px,5vw,76px); }
+.avaia-related .project-grid .project-card:nth-child(even) { margin-top:55px; }
+.avaia-case-study>.next-project { border-color:var(--avaia-line); }
+.project-image[data-theme="mwe"] { background:#e9ecfa; }
+.project-image[data-theme="avaia"] { background:#f3e6d1; }
+
+/* More Worldwide Exim runs the same editorial layout in the brand's indigo. */
+.avaia-case-study[data-theme="mwe"] { --avaia-cream:#e9ecfa; --avaia-brown:#27235f; --avaia-line:rgba(39,35,95,.24); background:#f6f7fc; }
+.avaia-case-study[data-theme="mwe"] .avaia-cell--banner .avaia-artwork,
+.avaia-case-study[data-theme="mwe"] .avaia-cell--cards .avaia-artwork { background:#fff; }
+.avaia-case-study[data-theme="mwe"] .avaia-cell--primary .avaia-artwork,
+.avaia-case-study[data-theme="mwe"] .avaia-cell--letterhead .avaia-artwork,
+.avaia-case-study[data-theme="mwe"] .avaia-cell--symbol .avaia-artwork { background:#e9ecfa; }
+.avaia-case-study[data-theme="mwe"] .avaia-cell--execution { background:#e9ecfa; }
+
+/* TitanReach Exim runs the same editorial layout in the brand's navy and ivory. */
+.avaia-case-study[data-theme="trx"] { --avaia-cream:#e9ecf1; --avaia-brown:#2f486d; --avaia-line:rgba(47,72,109,.26); background:#f4f2ec; }
+.avaia-case-study[data-theme="trx"] .avaia-cell--banner .avaia-artwork,
+.avaia-case-study[data-theme="trx"] .avaia-cell--cards .avaia-artwork,
+.avaia-case-study[data-theme="trx"] .avaia-cell--typeface .avaia-artwork { background:#fff; }
+.avaia-case-study[data-theme="trx"] .avaia-cell--primary .avaia-artwork,
+.avaia-case-study[data-theme="trx"] .avaia-cell--letterhead .avaia-artwork { background:#e9ecf1; }
+.avaia-case-study[data-theme="trx"] .avaia-cell--symbol .avaia-artwork { background:#2f486d; }
+.avaia-case-study[data-theme="trx"] .avaia-cell--execution { background:#e9ecf1; }
+.project-image[data-theme="trx"] { background:#2f486d; }
+
+/* Aaradhyaa Global Impex runs the same editorial layout in deep purple and gold. */
+.avaia-case-study[data-theme="argi"] { --avaia-cream:#f1ebe1; --avaia-brown:#3a0b4d; --avaia-line:rgba(58,11,77,.24); background:#faf6f0; }
+.avaia-case-study[data-theme="argi"] .avaia-cell--banner .avaia-artwork,
+.avaia-case-study[data-theme="argi"] .avaia-cell--cards .avaia-artwork,
+.avaia-case-study[data-theme="argi"] .avaia-cell--typeface .avaia-artwork { background:#fff; }
+.avaia-case-study[data-theme="argi"] .avaia-cell--primary .avaia-artwork,
+.avaia-case-study[data-theme="argi"] .avaia-cell--letterhead .avaia-artwork,
+.avaia-case-study[data-theme="argi"] .avaia-cell--symbol .avaia-artwork { background:#f1ebe1; }
+.avaia-case-study[data-theme="argi"] .avaia-cell--execution { background:#f1ebe1; }
+.project-image[data-theme="argi"] { background:#f1ebe1; }
+.avaia-links { padding:16px 0 0; margin:0; list-style:none; display:flex; flex-wrap:wrap; gap:12px 26px; font-size:12px; }
+.avaia-links a { display:inline-flex; align-items:center; gap:7px; text-decoration:underline; text-underline-offset:3px; }
+.avaia-links a:hover { text-decoration-thickness:2px; }
+
+@media(max-width:1100px) and (min-width:801px) {
+  .avaia-bento { gap:18px; }
+  .avaia-narrative { padding:24px 15px; }
+  .avaia-narrative p { font-size:13px; line-height:1.7; }
+  .avaia-cell--primary { min-height:800px; }
+  .avaia-cell--primary .avaia-artwork { padding:24px; }
+  .avaia-cell--letterhead .avaia-artwork { padding:24px; }
+}
+@media(max-width:800px) {
+  .avaia-opening { padding-top:30px; padding-bottom:30px; }
+  .avaia-opening .back-link { margin-bottom:35px; }
+  .avaia-intro-grid { grid-template-columns:1fr; gap:25px; }
+  .avaia-opening h1 { font-size:clamp(61px,13vw,98px); margin-top:20px; }
+  .avaia-opening h1 em { font-size:.6em; }
+  .avaia-introduction { max-width:520px; font-size:15px; }
+  .avaia-services { margin-top:25px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px 15px; font-size:10px; }
+  .avaia-bento { grid-template-columns:minmax(0,1fr); gap:22px; }
+  .avaia-bento>.avaia-cell { grid-column:1; grid-row:auto; min-height:0; margin-top:0; }
+  .avaia-cell--banner { margin-bottom:5px; }
+  .avaia-cell figcaption { font-size:9px; padding-top:11px; }
+  .avaia-narrative { padding:25px 10px; }
+  .avaia-narrative h2 { margin-bottom:16px; }
+  .avaia-narrative p { font-size:15px; line-height:1.75; }
+  .avaia-cell--primary .avaia-artwork { min-height:0; height:auto; padding:28px; }
+  .avaia-cell--primary img { width:100%; height:auto; max-height:none; }
+  .avaia-cell--cards .avaia-artwork { min-height:180px; padding:20px; }
+  .avaia-cell--execution { padding:28px 23px; }
+  .avaia-cell--execution ul { column-gap:18px; }
+  .avaia-cell--execution li { font-size:12px; }
+  .avaia-cell--letterhead .avaia-artwork { padding:25px; }
+  .avaia-cell--typeface .avaia-artwork { min-height:160px; padding:25px; }
+  .avaia-cell--symbol .avaia-artwork { padding:25px; min-height:0; height:360px; }
+  .avaia-cell--symbol img { max-height:310px; }
+  .avaia-cell--outcome { grid-template-columns:1fr; gap:12px; padding-top:35px; }
+  .avaia-cell--outcome p { font-size:clamp(30px,6vw,43px); line-height:1.25; }
+  .avaia-related .project-grid .project-card:nth-child(even) { margin-top:0; }
+}
+@media(max-width:380px) {
+  .avaia-services { grid-template-columns:1fr 1fr; }
+  .avaia-cell--execution ul { grid-template-columns:1fr; }
+}
