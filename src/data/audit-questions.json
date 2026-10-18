@@ -1,0 +1,278 @@
+[
+  {
+    "id": "q1",
+    "category": "strategy",
+    "question": "Do people understand what your business does immediately?",
+    "options": [
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "q2",
+    "category": "strategy",
+    "question": "How different does your business look compared to competitors?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q3",
+    "category": "strategy",
+    "question": "How clearly do you know who your ideal customers are?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q4",
+    "category": "strategy",
+    "question": "How premium does your business look?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q5",
+    "category": "strategy",
+    "question": "How confident are you showing your business to new customers?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q6",
+    "category": "identity",
+    "question": "Do you have a professionally designed logo?",
+    "options": [
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "q7",
+    "category": "identity",
+    "question": "How modern does your logo look?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q8",
+    "category": "identity",
+    "question": "Do you use the same colours everywhere?",
+    "options": [
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "q9",
+    "category": "identity",
+    "question": "How professional does your business look overall?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q10",
+    "category": "identity",
+    "question": "How memorable is your brand?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q11",
+    "category": "stationery",
+    "question": "Do you have a visiting card?",
+    "options": [
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "q12",
+    "category": "stationery",
+    "question": "How premium does your visiting card look?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q13",
+    "category": "stationery",
+    "question": "Do your bills and documents look professional?",
+    "options": [
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "q14",
+    "category": "stationery",
+    "question": "How professional do your business materials look overall?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q15",
+    "category": "packaging",
+    "question": "Do your products have proper packaging?",
+    "options": [
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "q16",
+    "category": "packaging",
+    "question": "How professional does your packaging look?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q17",
+    "category": "packaging",
+    "question": "How attractive is your packaging?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q18",
+    "category": "packaging",
+    "question": "Do all your products look like same brand?",
+    "options": [
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "q19",
+    "category": "packaging",
+    "question": "How confident are you in your packaging?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q20",
+    "category": "website",
+    "question": "Do you have a website?",
+    "options": [
+      "yes",
+      "no"
+    ]
+  },
+  {
+    "id": "q21",
+    "category": "website",
+    "question": "How modern does your website look?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q22",
+    "category": "website",
+    "question": "How confident are you showing your website to clients?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q23",
+    "category": "website",
+    "question": "How much does your website build trust?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q24",
+    "category": "trust",
+    "question": "How professional does your business look overall?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  },
+  {
+    "id": "q25",
+    "category": "trust",
+    "question": "How ready is your business to grow bigger?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+    ]
+  }
+]

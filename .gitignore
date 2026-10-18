@@ -9,4 +9,6 @@ coverage/
 next-env.d.ts
 artifacts/
 tmp/
-data/
+# Runtime storage only. Anchored to the repo root so that source folders
+# such as src/data are never excluded by accident.
+/data/
